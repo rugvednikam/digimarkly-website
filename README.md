@@ -21,6 +21,7 @@ Official responsive website for **DigiMarkly**, a creative digital growth partne
   - Local SEO & Google Search Visibility
 - 💡 **Realistic Concept Showcase**: Dedicated section showing actual demo builds tailored for:
   - 🍕 Restaurant & Café Platforms (Direct Ordering, Table Reservations)
+  - 💄 Beauty Parlour & Ladies Salons (Rate Cards, Bridal Packages, WhatsApp Bookings)
   - 🏡 Real Estate & Property Portals (Interactive Listings, Lead Capture)
   - 💼 Corporate & Business Suites (Client Onboarding, Consultation Booking)
   - 🛍️ Modern E-Commerce Stores (Lightning Checkout, Product Catalogs)
