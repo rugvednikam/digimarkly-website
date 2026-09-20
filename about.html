@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
   <title>About Us | DigiMarkly - Modern Digital Marketing Agency</title>
   <meta name="description" content="Learn more about DigiMarkly, a modern digital agency in Pune helping small and growing businesses build a clean web presence with transparent pricing.">
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -11,11 +11,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
   <style>
     @layer base {
-      html, body { margin: 0; padding: 0; }
-      body { overscroll-behavior: none; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        overscroll-behavior-y: none;
+      }
       main > :first-child { margin-top: 0 !important; }
       main > :last-child { margin-bottom: 0 !important; }
     }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     ::-webkit-scrollbar { display: none; }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -24,6 +39,13 @@
       darkMode: "class",
       theme: {
         extend: {
+          screens: {
+            'xs': '420px',
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px'
+          },
           colors: {
             "surface": "#f9f9ff",
             "surface-bright": "#f9f9ff",
@@ -54,14 +76,6 @@
             "3xl": "1.5rem",
             "full": "9999px"
           },
-          spacing: {
-            "gutter": "1.5rem",
-            "space-xs": "0.25rem",
-            "space-sm": "0.5rem",
-            "space-md": "1rem",
-            "space-lg": "1.5rem",
-            "space-xl": "2.5rem"
-          },
           fontFamily: {
             "display": ["Plus Jakarta Sans", "sans-serif"],
             "body": ["Plus Jakarta Sans", "sans-serif"]
@@ -71,25 +85,28 @@
     };
   </script>
 </head>
-<body class="bg-surface font-body text-body text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<body class="bg-surface font-body text-body text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden w-full">
+
+  <!-- Mobile Backdrop Overlay -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden transition-opacity duration-300"></div>
 
   <!-- HEADER / NAVIGATION -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-    <div class="h-20 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md">
-      <div class="flex items-center gap-space-sm">
-        <a class="flex items-center gap-space-sm group" href="index.html">
-          <div class="relative flex items-center justify-center">
-            <img alt="DigiMarkly Agency" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container/20 group-hover:ring-primary-container transition-all" src="https://lh3.googleusercontent.com/aida/AEtjO1VgcJPJgxc0G3s3EXTmimor0GwqWcjg-Fy_WEHFGjtAl0wVtwYVQVFrc_Ar0JxSAc-InR1tmfAtJIleSKjxbA_oNVKw50mEtpRSd4S_a5zExnqqqLUmEGpUPr3HRBYBQPmwSfL6eKQ1k85KnhC1kfvPJQ6Qo37bdWpcdF78ciI6lLHZiIxBq40ikF_ipyHVaP7bvsb3_VQub0lxd-jDpbD-RnACEucvpyfyOnGXZAOo1-egfXRKQteBSGyGATrUw6dqjiy2qBfwFQ">
-            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-secondary-container rounded-full border-2 border-surface-container-lowest"></span>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-surface-container/50">
+    <div class="h-16 sm:h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a class="flex items-center gap-2 sm:gap-3 group" href="index.html">
+          <div class="relative flex items-center justify-center shrink-0">
+            <img alt="DigiMarkly Agency" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover ring-2 ring-primary-container/20 group-hover:ring-primary-container transition-all" src="https://lh3.googleusercontent.com/aida/AEtjO1VgcJPJgxc0G3s3EXTmimor0GwqWcjg-Fy_WEHFGjtAl0wVtwYVQVFrc_Ar0JxSAc-InR1tmfAtJIleSKjxbA_oNVKw50mEtpRSd4S_a5zExnqqqLUmEGpUPr3HRBYBQPmwSfL6eKQ1k85KnhC1kfvPJQ6Qo37bdWpcdF78ciI6lLHZiIxBq40ikF_ipyHVaP7bvsb3_VQub0lxd-jDpbD-RnACEucvpyfyOnGXZAOo1-egfXRKQteBSGyGATrUw6dqjiy2qBfwFQ">
+            <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-secondary-container rounded-full border-2 border-surface-container-lowest"></span>
           </div>
           <div class="flex flex-col">
-            <span class="text-xl font-bold text-primary tracking-tight">DigiMarkly</span>
-            <span class="text-xs text-on-surface-variant -mt-1 hidden sm:inline font-medium">Growth Studio</span>
+            <span class="text-lg sm:text-xl font-extrabold text-primary tracking-tight leading-none">DigiMarkly</span>
+            <span class="text-[10px] sm:text-xs text-on-surface-variant font-medium mt-0.5 hidden xs:inline">Growth Studio</span>
           </div>
         </a>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold">
         <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
         <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="services.html">Services</a>
         <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="our-work.html">Our Work</a>
@@ -98,93 +115,140 @@
         <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
       </nav>
 
-      <div class="flex items-center gap-3">
-        <a class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-[0_4px_20px_-2px_rgba(16,185,129,0.25)] hover:shadow-[0_12px_32px_-4px_rgba(16,185,129,0.35)] hover:-translate-y-0.5 transition-all" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
-          <span class="material-symbols-outlined text-lg">chat</span>
-          <span>WhatsApp Us</span>
+      <div class="flex items-center gap-1.5 sm:gap-3">
+        <a class="group relative inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-label-md text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl shadow-[0_4px_20px_-2px_rgba(16,185,129,0.25)] hover:shadow-[0_12px_32px_-4px_rgba(16,185,129,0.35)] hover:-translate-y-0.5 transition-all" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+          <span class="material-symbols-outlined text-base sm:text-lg">chat</span>
+          <span class="hidden xs:inline sm:inline">WhatsApp Us</span>
+          <span class="xs:hidden font-bold">Chat</span>
         </a>
         <a class="hidden sm:inline-flex items-center p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/digimarklyofficial/" target="_blank" title="Instagram @digimarklyofficial">
           <span class="material-symbols-outlined text-xl text-pink-600">photo_camera</span>
         </a>
-        <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden p-2 text-on-surface-variant hover:text-primary rounded-lg hover:bg-surface-container transition-colors" type="button">
-          <span class="material-symbols-outlined text-2xl">menu</span>
+        <button id="mobile-menu-btn" aria-label="Open Navigation Menu" class="md:hidden p-2.5 text-on-surface-variant hover:text-primary rounded-xl hover:bg-surface-container transition-colors flex items-center justify-center min-w-[44px] min-h-[44px]" type="button">
+          <span id="mobile-menu-icon" class="material-symbols-outlined text-2xl">menu</span>
         </button>
       </div>
     </div>
 
     <!-- Mobile Nav Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest border-t border-surface-container px-6 py-4 flex-col gap-3">
-      <a class="py-2 text-on-surface-variant font-medium" href="index.html">Home</a>
-      <a class="py-2 text-on-surface-variant font-medium" href="services.html">Services</a>
-      <a class="py-2 text-on-surface-variant font-medium" href="our-work.html">Our Work</a>
-      <a class="py-2 text-primary font-bold" href="about.html">About Us</a>
-      <a class="py-2 text-on-surface-variant font-medium" href="pricing.html">Pricing</a>
-      <a class="py-2 text-on-surface-variant font-medium" href="contact.html">Contact</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest border-t border-surface-container px-4 py-4 flex flex-col gap-1.5 shadow-2xl max-h-[calc(100vh-64px)] overflow-y-auto">
+      <a class="min-h-[44px] py-2.5 px-3 rounded-xl text-on-surface hover:bg-surface-container-low font-medium flex items-center justify-between text-sm transition-colors" href="index.html">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-lg text-primary">home</span>
+          <span>Home</span>
+        </div>
+        <span class="material-symbols-outlined text-sm text-on-surface-variant">chevron_right</span>
+      </a>
+      <a class="min-h-[44px] py-2.5 px-3 rounded-xl text-on-surface hover:bg-surface-container-low font-medium flex items-center justify-between text-sm transition-colors" href="services.html">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-lg text-primary">design_services</span>
+          <span>Services</span>
+        </div>
+        <span class="material-symbols-outlined text-sm text-on-surface-variant">chevron_right</span>
+      </a>
+      <a class="min-h-[44px] py-2.5 px-3 rounded-xl text-on-surface hover:bg-surface-container-low font-medium flex items-center justify-between text-sm transition-colors" href="our-work.html">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-lg text-primary">explore</span>
+          <span>Our Work</span>
+        </div>
+        <span class="material-symbols-outlined text-sm text-on-surface-variant">chevron_right</span>
+      </a>
+      <a class="min-h-[44px] py-2.5 px-3 rounded-xl text-primary font-bold bg-primary-fixed/40 flex items-center justify-between text-sm" href="about.html">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-lg">groups</span>
+          <span>About Us</span>
+        </div>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+      <a class="min-h-[44px] py-2.5 px-3 rounded-xl text-on-surface hover:bg-surface-container-low font-medium flex items-center justify-between text-sm transition-colors" href="pricing.html">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-lg text-primary">payments</span>
+          <span>Pricing</span>
+        </div>
+        <span class="material-symbols-outlined text-sm text-on-surface-variant">chevron_right</span>
+      </a>
+      <a class="min-h-[44px] py-2.5 px-3 rounded-xl text-on-surface hover:bg-surface-container-low font-medium flex items-center justify-between text-sm transition-colors" href="contact.html">
+        <div class="flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-lg text-primary">call</span>
+          <span>Contact</span>
+        </div>
+        <span class="material-symbols-outlined text-sm text-on-surface-variant">chevron_right</span>
+      </a>
+      <div class="pt-3 mt-2 border-t border-surface-container flex flex-col gap-2">
+        <a class="min-h-[44px] w-full py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-center flex items-center justify-center gap-2 shadow-sm text-xs transition-colors" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+          <span class="material-symbols-outlined text-base">chat</span>
+          <span>WhatsApp: +91 95884 79306</span>
+        </a>
+        <a class="min-h-[44px] w-full py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-pink-600 font-semibold text-center flex items-center justify-center gap-2 text-xs transition-colors" href="https://www.instagram.com/digimarklyofficial/" target="_blank">
+          <span class="material-symbols-outlined text-base">photo_camera</span>
+          <span>Follow @digimarklyofficial</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <main class="pt-24 min-h-screen">
+  <main class="pt-16 sm:pt-20 min-h-screen overflow-x-hidden w-full">
     <!-- HERO -->
-    <section class="py-16 md:py-24 bg-gradient-to-b from-surface-container-low to-surface border-b border-surface-container/60">
-      <div class="max-w-7xl mx-auto px-gutter text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed text-primary font-semibold text-xs mb-4 shadow-sm">
+    <section class="py-12 sm:py-16 md:py-24 bg-gradient-to-b from-surface-container-low to-surface border-b border-surface-container/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-fixed text-primary font-semibold text-xs mb-3 sm:mb-4 shadow-sm">
           <span class="w-2 h-2 rounded-full bg-primary"></span>
-          Our Story & Approach
+          Our Story &amp; Approach
         </div>
-        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-on-surface tracking-tight max-w-4xl mx-auto leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-on-surface tracking-tight max-w-4xl mx-auto leading-tight break-words">
           A Fresh, Grounded Approach to <span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">Digital Growth</span>
         </h1>
-        <p class="text-base md:text-lg text-on-surface-variant max-w-2xl mx-auto mt-4 leading-relaxed">
+        <p class="text-xs sm:text-sm md:text-base lg:text-lg text-on-surface-variant max-w-2xl mx-auto mt-3 sm:mt-4 leading-relaxed">
           We started DigiMarkly to give local businesses and startups an honest, accessible digital partner without bloated agency retainers or technical jargon.
         </p>
       </div>
     </section>
 
     <!-- STORY & PHILOSOPHY -->
-    <section class="py-20 bg-surface">
-      <div class="max-w-7xl mx-auto px-gutter">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-6">
+    <section class="py-14 sm:py-20 bg-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div class="lg:col-span-6 w-full">
             <div class="rounded-3xl overflow-hidden shadow-xl bg-surface-container">
-              <img alt="DigiMarkly Studio Team" class="w-full h-[420px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3DfeB9FUl0vaAQSGVnHdalmumJW5jiEGOZZYIZxwQCUhO_ICFJC70ssmHsVVHnqbEnNdnEQhxwHDv9mK32eQFYIzU4GYEysQY4CmmKmbg8_Ut5djuANNXJlJ7x7zGqFqvQsLzLsOWpE2bsdMAUppBCYhUsKKVRykPINx3k9VXyLDT1_JNDrRwCQs-oIXlamvDn_iYnFfXd_pqALvvyxNh8VWt6ANyu_-cC33s91MkN3Hu4aKXKjek">
+              <img alt="DigiMarkly Studio Team" class="w-full h-56 sm:h-80 md:h-[400px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3DfeB9FUl0vaAQSGVnHdalmumJW5jiEGOZZYIZxwQCUhO_ICFJC70ssmHsVVHnqbEnNdnEQhxwHDv9mK32eQFYIzU4GYEysQY4CmmKmbg8_Ut5djuANNXJlJ7x7zGqFqvQsLzLsOWpE2bsdMAUppBCYhUsKKVRykPINx3k9VXyLDT1_JNDrRwCQs-oIXlamvDn_iYnFfXd_pqALvvyxNh8VWt6ANyu_-cC33s91MkN3Hu4aKXKjek">
             </div>
           </div>
 
-          <div class="lg:col-span-6 flex flex-col gap-6">
+          <div class="lg:col-span-6 flex flex-col gap-4 sm:gap-6">
             <div class="inline-flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-wider">
               <span class="material-symbols-outlined text-base">handshake</span>
               Why We Exist
             </div>
-            <h2 class="text-2xl md:text-4xl font-extrabold text-on-surface tracking-tight">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-on-surface tracking-tight">
               Small Businesses Deserve Modern Websites Without Complications
             </h2>
-            <p class="text-base text-on-surface-variant leading-relaxed">
+            <p class="text-xs sm:text-sm md:text-base text-on-surface-variant leading-relaxed">
               Too many traditional agencies charge enormous setup fees, use confusing tech buzzwords, and hand off accounts to junior interns who take weeks to reply.
             </p>
-            <p class="text-base text-on-surface-variant leading-relaxed">
+            <p class="text-xs sm:text-sm md:text-base text-on-surface-variant leading-relaxed">
               At DigiMarkly, we do things differently:
             </p>
 
             <div class="space-y-3">
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low">
-                <span class="material-symbols-outlined text-primary text-xl mt-0.5">chat_bubble</span>
+              <div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-primary text-xl mt-0.5 shrink-0">chat_bubble</span>
                 <div>
-                  <h4 class="font-bold text-sm text-on-surface">Direct WhatsApp Communication</h4>
-                  <p class="text-xs text-on-surface-variant">Talk directly with the creators building your site and running your ads.</p>
+                  <h4 class="font-bold text-xs sm:text-sm text-on-surface">Direct WhatsApp Communication</h4>
+                  <p class="text-[11px] sm:text-xs text-on-surface-variant mt-0.5">Talk directly with the creators building your site and running your ads.</p>
                 </div>
               </div>
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low">
-                <span class="material-symbols-outlined text-emerald-600 text-xl mt-0.5">verified_user</span>
+              <div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-emerald-600 text-xl mt-0.5 shrink-0">verified_user</span>
                 <div>
-                  <h4 class="font-bold text-sm text-on-surface">100% Upfront Pricing</h4>
-                  <p class="text-xs text-on-surface-variant">Websites starting from ₹7,000 with clear deliverables agreed upon before we start.</p>
+                  <h4 class="font-bold text-xs sm:text-sm text-on-surface">100% Upfront Pricing</h4>
+                  <p class="text-[11px] sm:text-xs text-on-surface-variant mt-0.5">Websites starting from ₹7,000 with clear deliverables agreed upon before we start.</p>
                 </div>
               </div>
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low">
-                <span class="material-symbols-outlined text-secondary text-xl mt-0.5">speed</span>
+              <div class="flex items-start gap-3 p-3.5 rounded-xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-secondary text-xl mt-0.5 shrink-0">speed</span>
                 <div>
-                  <h4 class="font-bold text-sm text-on-surface">Built for Speed and Mobile Devices</h4>
-                  <p class="text-xs text-on-surface-variant">Your customers browse on phones. Our websites load fast and look stunning on all screens.</p>
+                  <h4 class="font-bold text-xs sm:text-sm text-on-surface">Built for Speed and Mobile Devices</h4>
+                  <p class="text-[11px] sm:text-xs text-on-surface-variant mt-0.5">Your customers browse on phones. Our websites load fast and look clean on all screen sizes.</p>
                 </div>
               </div>
             </div>
@@ -194,49 +258,49 @@
     </section>
 
     <!-- CORE PRINCIPLES -->
-    <section class="py-20 bg-surface-container-low">
-      <div class="max-w-7xl mx-auto px-gutter">
-        <div class="text-center max-w-3xl mx-auto mb-14">
+    <section class="py-14 sm:py-20 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <span class="text-xs font-bold text-secondary uppercase tracking-wider block mb-2">Our Operating Values</span>
-          <h2 class="text-2xl md:text-4xl font-extrabold text-on-surface">What Guides Everything We Build</h2>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-on-surface">What Guides Everything We Build</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
             <div>
-              <span class="text-3xl font-extrabold text-primary-fixed-dim block mb-3">01</span>
-              <h3 class="text-lg font-bold text-on-surface mb-2">Honesty First</h3>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
+              <span class="text-3xl font-extrabold text-primary-fixed-dim block mb-2">01</span>
+              <h3 class="text-base sm:text-lg font-bold text-on-surface mb-2">Honesty First</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                 If a service or ad strategy won't actually help your specific business, we'll tell you straight away. We don't sell things you don't need.
               </p>
             </div>
-            <div class="mt-6 pt-3 border-t border-surface-container-low text-xs font-semibold text-secondary">
+            <div class="mt-4 pt-3 border-t border-surface-container-low text-xs font-semibold text-secondary">
               Grounded Guidance
             </div>
           </div>
 
-          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+          <div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
             <div>
-              <span class="text-3xl font-extrabold text-primary-fixed-dim block mb-3">02</span>
-              <h3 class="text-lg font-bold text-on-surface mb-2">Human Language</h3>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
+              <span class="text-3xl font-extrabold text-primary-fixed-dim block mb-2">02</span>
+              <h3 class="text-base sm:text-lg font-bold text-on-surface mb-2">Human Language</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                 We speak plainly. No complicated acronyms or artificial fluff. You'll always know exactly what we're working on and how it's performing.
               </p>
             </div>
-            <div class="mt-6 pt-3 border-t border-surface-container-low text-xs font-semibold text-secondary">
+            <div class="mt-4 pt-3 border-t border-surface-container-low text-xs font-semibold text-secondary">
               Zero Confusion
             </div>
           </div>
 
-          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+          <div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
             <div>
-              <span class="text-3xl font-extrabold text-primary-fixed-dim block mb-3">03</span>
-              <h3 class="text-lg font-bold text-on-surface mb-2">Long-Term Partnership</h3>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
+              <span class="text-3xl font-extrabold text-primary-fixed-dim block mb-2">03</span>
+              <h3 class="text-base sm:text-lg font-bold text-on-surface mb-2">Long-Term Partnership</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                 We're here to help your business grow month after month. From adding new menu items to launching festive campaigns, we're just a WhatsApp text away.
               </p>
             </div>
-            <div class="mt-6 pt-3 border-t border-surface-container-low text-xs font-semibold text-secondary">
+            <div class="mt-4 pt-3 border-t border-surface-container-low text-xs font-semibold text-secondary">
               Continuous Support
             </div>
           </div>
@@ -245,23 +309,23 @@
     </section>
 
     <!-- LOCATION & DIRECT CONNECT -->
-    <section class="py-16 bg-surface">
-      <div class="max-w-5xl mx-auto px-gutter text-center flex flex-col items-center gap-6">
-        <div class="inline-flex items-center gap-2 text-primary text-sm font-semibold">
-          <span class="material-symbols-outlined text-lg">location_on</span>
+    <section class="py-12 sm:py-16 bg-surface">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-4 sm:gap-6">
+        <div class="inline-flex items-center gap-1.5 text-primary text-xs sm:text-sm font-semibold">
+          <span class="material-symbols-outlined text-base sm:text-lg">location_on</span>
           <span>Pune, Maharashtra • Serving Businesses Across India</span>
         </div>
-        <h2 class="text-2xl md:text-4xl font-extrabold text-on-surface">Ready to Start Building Your Brand Online?</h2>
-        <p class="text-sm md:text-base text-on-surface-variant max-w-xl">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-on-surface">Ready to Start Building Your Brand Online?</h2>
+        <p class="text-xs sm:text-sm md:text-base text-on-surface-variant max-w-xl leading-relaxed">
           Get in touch with us on WhatsApp or explore our Instagram for the latest design concepts and insights.
         </p>
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <a class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-md hover:-translate-y-0.5 transition-all text-sm" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
-            <span class="material-symbols-outlined text-lg">chat</span>
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 w-full sm:w-auto">
+          <a class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-md hover:-translate-y-0.5 transition-all text-xs sm:text-sm text-center" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+            <span class="material-symbols-outlined text-base sm:text-lg">chat</span>
             <span>Chat on WhatsApp (+91 95884 79306)</span>
           </a>
-          <a class="inline-flex items-center gap-2 bg-surface-container hover:bg-surface-container-high text-pink-700 font-bold px-6 py-3 rounded-xl transition-all text-sm" href="https://www.instagram.com/digimarklyofficial/" target="_blank">
-            <span class="material-symbols-outlined text-lg">photo_camera</span>
+          <a class="inline-flex items-center justify-center gap-2 bg-surface-container hover:bg-surface-container-high text-pink-700 font-bold px-6 py-3.5 rounded-xl transition-all text-xs sm:text-sm text-center" href="https://www.instagram.com/digimarklyofficial/" target="_blank">
+            <span class="material-symbols-outlined text-base sm:text-lg">photo_camera</span>
             <span>Follow @digimarklyofficial</span>
           </a>
         </div>
@@ -271,14 +335,14 @@
 
   <!-- FOOTER -->
   <footer class="w-full bg-surface-container-low border-t border-surface-container">
-    <div class="max-w-7xl mx-auto px-gutter pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8 sm:pt-12 sm:pb-8">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
         <div class="md:col-span-5 flex flex-col gap-3">
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2.5">
             <img alt="DigiMarkly Logo" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida/AEtjO1VgcJPJgxc0G3s3EXTmimor0GwqWcjg-Fy_WEHFGjtAl0wVtwYVQVFrc_Ar0JxSAc-InR1tmfAtJIleSKjxbA_oNVKw50mEtpRSd4S_a5zExnqqqLUmEGpUPr3HRBYBQPmwSfL6eKQ1k85KnhC1kfvPJQ6Qo37bdWpcdF78ciI6lLHZiIxBq40ikF_ipyHVaP7bvsb3_VQub0lxd-jDpbD-RnACEucvpyfyOnGXZAOo1-egfXRKQteBSGyGATrUw6dqjiy2qBfwFQ">
             <span class="text-xl font-bold text-primary">DigiMarkly</span>
           </div>
-          <p class="text-sm text-on-surface-variant max-w-md">
+          <p class="text-xs sm:text-sm text-on-surface-variant max-w-md leading-relaxed">
             A digital agency helping businesses build an effective online presence with clarity and genuine care.
           </p>
           <p class="text-xs text-on-surface-variant flex items-center gap-1">
@@ -287,9 +351,9 @@
           </p>
         </div>
 
-        <div class="md:col-span-4 flex flex-col gap-3">
+        <div class="md:col-span-4 flex flex-col gap-2.5">
           <span class="text-xs font-bold text-on-surface uppercase tracking-wider">Pages</span>
-          <nav class="flex flex-col gap-2 text-sm">
+          <nav class="flex flex-col gap-1.5 text-xs sm:text-sm">
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="services.html">Services</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="our-work.html">Our Work</a>
@@ -301,7 +365,7 @@
 
         <div class="md:col-span-3 flex flex-col gap-3">
           <span class="text-xs font-bold text-on-surface uppercase tracking-wider">Direct Contact</span>
-          <div class="flex flex-col gap-2 text-sm">
+          <div class="flex flex-col gap-2 text-xs sm:text-sm">
             <a class="inline-flex items-center gap-1.5 text-emerald-700 font-semibold hover:underline" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
               <span class="material-symbols-outlined text-base text-emerald-600">chat</span>
               <span>WhatsApp: +91 95884 79306</span>
@@ -326,21 +390,67 @@
   </footer>
 
   <!-- Floating WhatsApp Widget -->
-  <div class="fixed bottom-6 right-6 z-40">
-    <a class="group flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
-      <span class="material-symbols-outlined text-white text-xl">chat</span>
-      <span class="text-sm font-bold pr-1">Chat on WhatsApp</span>
+  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40">
+    <a class="group flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-full shadow-[0_12px_32px_-4px_rgba(16,185,129,0.4)] hover:shadow-[0_16px_40px_-4px_rgba(16,185,129,0.5)] hover:-translate-y-1 transition-all" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+      <span class="flex h-2.5 w-2.5 relative">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+      </span>
+      <span class="material-symbols-outlined text-white text-lg sm:text-xl">chat</span>
+      <span class="text-xs sm:text-sm font-bold pr-0.5 hidden xs:inline">Chat on WhatsApp</span>
+      <span class="text-xs font-bold xs:hidden">WhatsApp</span>
     </a>
   </div>
 
   <script>
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileBtn && mobileMenu) {
-      mobileBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileBackdrop = document.getElementById('mobile-backdrop');
+      const mobileIcon = document.getElementById('mobile-menu-icon');
+
+      function openMobileMenu() {
+        mobileMenu.classList.remove('hidden');
+        if (mobileBackdrop) mobileBackdrop.classList.remove('hidden');
+        if (mobileIcon) mobileIcon.textContent = 'close';
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.add('hidden');
+        if (mobileBackdrop) mobileBackdrop.classList.add('hidden');
+        if (mobileIcon) mobileIcon.textContent = 'menu';
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isHidden = mobileMenu.classList.contains('hidden');
+          if (isHidden) {
+            openMobileMenu();
+          } else {
+            closeMobileMenu();
+          }
+        });
+
+        if (mobileBackdrop) {
+          mobileBackdrop.addEventListener('click', () => {
+            closeMobileMenu();
+          });
+        }
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeMobileMenu();
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            closeMobileMenu();
+          });
+        });
+      }
+    });
   </script>
 </body>
 </html>
