@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>About Us | DigiMarkly - Modern Digital Marketing Agency</title>
+  <meta name="description" content="Learn more about DigiMarkly, a modern digital agency in Pune helping small and growing businesses build a clean web presence with transparent pricing.">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#f9f9ff",
+            "surface-bright": "#f9f9ff",
+            "surface-container": "#e9edff",
+            "surface-container-low": "#f1f3ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e1e8fd",
+            "surface-container-highest": "#dce2f7",
+            "on-surface": "#141b2b",
+            "on-surface-variant": "#444654",
+            "primary": "#002d9b",
+            "primary-container": "#1a44c2",
+            "primary-fixed": "#dde1ff",
+            "primary-fixed-dim": "#b7c4ff",
+            "on-primary": "#ffffff",
+            "secondary": "#855300",
+            "secondary-container": "#fea619",
+            "secondary-fixed": "#ffddb8",
+            "on-secondary-fixed": "#2a1700",
+            "outline": "#747685",
+            "outline-variant": "#c4c5d6"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"],
+            "body": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body text-body text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm">
+        <a class="flex items-center gap-space-sm group" href="index.html">
+          <div class="relative flex items-center justify-center">
+            <img alt="DigiMarkly Agency" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container/20 group-hover:ring-primary-container transition-all" src="https://lh3.googleusercontent.com/aida/AEtjO1VgcJPJgxc0G3s3EXTmimor0GwqWcjg-Fy_WEHFGjtAl0wVtwYVQVFrc_Ar0JxSAc-InR1tmfAtJIleSKjxbA_oNVKw50mEtpRSd4S_a5zExnqqqLUmEGpUPr3HRBYBQPmwSfL6eKQ1k85KnhC1kfvPJQ6Qo37bdWpcdF78ciI6lLHZiIxBq40ikF_ipyHVaP7bvsb3_VQub0lxd-jDpbD-RnACEucvpyfyOnGXZAOo1-egfXRKQteBSGyGATrUw6dqjiy2qBfwFQ">
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-secondary-container rounded-full border-2 border-surface-container-lowest"></span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold text-primary tracking-tight">DigiMarkly</span>
+            <span class="text-xs text-on-surface-variant -mt-1 hidden sm:inline font-medium">Growth Studio</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+        <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="services.html">Services</a>
+        <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="our-work.html">Our Work</a>
+        <a aria-current="page" class="relative py-2 text-primary font-bold after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:scale-x-100" href="about.html">About Us</a>
+        <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+        <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-[0_4px_20px_-2px_rgba(16,185,129,0.25)] hover:shadow-[0_12px_32px_-4px_rgba(16,185,129,0.35)] hover:-translate-y-0.5 transition-all" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+          <span class="material-symbols-outlined text-lg">chat</span>
+          <span>WhatsApp Us</span>
+        </a>
+        <a class="hidden sm:inline-flex items-center p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/digimarklyofficial/" target="_blank" title="Instagram @digimarklyofficial">
+          <span class="material-symbols-outlined text-xl text-pink-600">photo_camera</span>
+        </a>
+        <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden p-2 text-on-surface-variant hover:text-primary rounded-lg hover:bg-surface-container transition-colors" type="button">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest border-t border-surface-container px-6 py-4 flex-col gap-3">
+      <a class="py-2 text-on-surface-variant font-medium" href="index.html">Home</a>
+      <a class="py-2 text-on-surface-variant font-medium" href="services.html">Services</a>
+      <a class="py-2 text-on-surface-variant font-medium" href="our-work.html">Our Work</a>
+      <a class="py-2 text-primary font-bold" href="about.html">About Us</a>
+      <a class="py-2 text-on-surface-variant font-medium" href="pricing.html">Pricing</a>
+      <a class="py-2 text-on-surface-variant font-medium" href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-24 min-h-screen">
+    <!-- HERO -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-surface-container-low to-surface border-b border-surface-container/60">
+      <div class="max-w-7xl mx-auto px-gutter text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed text-primary font-semibold text-xs mb-4 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-primary"></span>
+          Our Story & Approach
+        </div>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-on-surface tracking-tight max-w-4xl mx-auto leading-tight">
+          A Fresh, Grounded Approach to <span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">Digital Growth</span>
+        </h1>
+        <p class="text-base md:text-lg text-on-surface-variant max-w-2xl mx-auto mt-4 leading-relaxed">
+          We started DigiMarkly to give local businesses and startups an honest, accessible digital partner without bloated agency retainers or technical jargon.
+        </p>
+      </div>
+    </section>
+
+    <!-- STORY & PHILOSOPHY -->
+    <section class="py-20 bg-surface">
+      <div class="max-w-7xl mx-auto px-gutter">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6">
+            <div class="rounded-3xl overflow-hidden shadow-xl bg-surface-container">
+              <img alt="DigiMarkly Studio Team" class="w-full h-[420px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3DfeB9FUl0vaAQSGVnHdalmumJW5jiEGOZZYIZxwQCUhO_ICFJC70ssmHsVVHnqbEnNdnEQhxwHDv9mK32eQFYIzU4GYEysQY4CmmKmbg8_Ut5djuANNXJlJ7x7zGqFqvQsLzLsOWpE2bsdMAUppBCYhUsKKVRykPINx3k9VXyLDT1_JNDrRwCQs-oIXlamvDn_iYnFfXd_pqALvvyxNh8VWt6ANyu_-cC33s91MkN3Hu4aKXKjek">
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 flex flex-col gap-6">
+            <div class="inline-flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-wider">
+              <span class="material-symbols-outlined text-base">handshake</span>
+              Why We Exist
+            </div>
+            <h2 class="text-2xl md:text-4xl font-extrabold text-on-surface tracking-tight">
+              Small Businesses Deserve Modern Websites Without Complications
+            </h2>
+            <p class="text-base text-on-surface-variant leading-relaxed">
+              Too many traditional agencies charge enormous setup fees, use confusing tech buzzwords, and hand off accounts to junior interns who take weeks to reply.
+            </p>
+            <p class="text-base text-on-surface-variant leading-relaxed">
+              At DigiMarkly, we do things differently:
+            </p>
+
+            <div class="space-y-3">
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-primary text-xl mt-0.5">chat_bubble</span>
+                <div>
+                  <h4 class="font-bold text-sm text-on-surface">Direct WhatsApp Communication</h4>
+                  <p class="text-xs text-on-surface-variant">Talk directly with the creators building your site and running your ads.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-emerald-600 text-xl mt-0.5">verified_user</span>
+                <div>
+                  <h4 class="font-bold text-sm text-on-surface">100% Upfront Pricing</h4>
+                  <p class="text-xs text-on-surface-variant">Websites starting from ₹7,000 with clear deliverables agreed upon before we start.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3 rounded-xl bg-surface-container-low">
+                <span class="material-symbols-outlined text-secondary text-xl mt-0.5">speed</span>
+                <div>
+                  <h4 class="font-bold text-sm text-on-surface">Built for Speed and Mobile Devices</h4>
+                  <p class="text-xs text-on-surface-variant">Your customers browse on phones. Our websites load fast and look stunning on all screens.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE PRINCIPLES -->
+    <section class="py-20 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-gutter">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold text-secondary uppercase tracking-wider block mb-2">Our Operating Values</span>
+          <h2 class="text-2xl md:text-4xl font-extrabold text-on-surface">What Guides Everything We Build</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+            <div>
+              <span class="text-3xl font-extrabold text-primary-fixed-dim block mb-3">01</span>
+              <h3 class="text-lg font-bold text-on-surface mb-2">Honesty First</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                If a service or ad strategy won't actually help your specific business, we'll tell you straight away. We don't sell things you don't need.
+              </p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-surface-container-low text-xs font-semibold text-secondary">
+              Grounded Guidance
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+            <div>
+              <span class="text-3xl font-extrabold text-primary-fixed-dim block mb-3">02</span>
+              <h3 class="text-lg font-bold text-on-surface mb-2">Human Language</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                We speak plainly. No complicated acronyms or artificial fluff. You'll always know exactly what we're working on and how it's performing.
+              </p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-surface-container-low text-xs font-semibold text-secondary">
+              Zero Confusion
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+            <div>
+              <span class="text-3xl font-extrabold text-primary-fixed-dim block mb-3">03</span>
+              <h3 class="text-lg font-bold text-on-surface mb-2">Long-Term Partnership</h3>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                We're here to help your business grow month after month. From adding new menu items to launching festive campaigns, we're just a WhatsApp text away.
+              </p>
+            </div>
+            <div class="mt-6 pt-3 border-t border-surface-container-low text-xs font-semibold text-secondary">
+              Continuous Support
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION & DIRECT CONNECT -->
+    <section class="py-16 bg-surface">
+      <div class="max-w-5xl mx-auto px-gutter text-center flex flex-col items-center gap-6">
+        <div class="inline-flex items-center gap-2 text-primary text-sm font-semibold">
+          <span class="material-symbols-outlined text-lg">location_on</span>
+          <span>Pune, Maharashtra • Serving Businesses Across India</span>
+        </div>
+        <h2 class="text-2xl md:text-4xl font-extrabold text-on-surface">Ready to Start Building Your Brand Online?</h2>
+        <p class="text-sm md:text-base text-on-surface-variant max-w-xl">
+          Get in touch with us on WhatsApp or explore our Instagram for the latest design concepts and insights.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-md hover:-translate-y-0.5 transition-all text-sm" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+            <span class="material-symbols-outlined text-lg">chat</span>
+            <span>Chat on WhatsApp (+91 95884 79306)</span>
+          </a>
+          <a class="inline-flex items-center gap-2 bg-surface-container hover:bg-surface-container-high text-pink-700 font-bold px-6 py-3 rounded-xl transition-all text-sm" href="https://www.instagram.com/digimarklyofficial/" target="_blank">
+            <span class="material-symbols-outlined text-lg">photo_camera</span>
+            <span>Follow @digimarklyofficial</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low border-t border-surface-container">
+    <div class="max-w-7xl mx-auto px-gutter pt-12 pb-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-5 flex flex-col gap-3">
+          <div class="flex items-center gap-3">
+            <img alt="DigiMarkly Logo" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida/AEtjO1VgcJPJgxc0G3s3EXTmimor0GwqWcjg-Fy_WEHFGjtAl0wVtwYVQVFrc_Ar0JxSAc-InR1tmfAtJIleSKjxbA_oNVKw50mEtpRSd4S_a5zExnqqqLUmEGpUPr3HRBYBQPmwSfL6eKQ1k85KnhC1kfvPJQ6Qo37bdWpcdF78ciI6lLHZiIxBq40ikF_ipyHVaP7bvsb3_VQub0lxd-jDpbD-RnACEucvpyfyOnGXZAOo1-egfXRKQteBSGyGATrUw6dqjiy2qBfwFQ">
+            <span class="text-xl font-bold text-primary">DigiMarkly</span>
+          </div>
+          <p class="text-sm text-on-surface-variant max-w-md">
+            A digital agency helping businesses build an effective online presence with clarity and genuine care.
+          </p>
+          <p class="text-xs text-on-surface-variant flex items-center gap-1">
+            <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+            Based in Pune, India • Serving Pan-India
+          </p>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-3">
+          <span class="text-xs font-bold text-on-surface uppercase tracking-wider">Pages</span>
+          <nav class="flex flex-col gap-2 text-sm">
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="services.html">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="our-work.html">Our Work</a>
+            <a class="text-primary font-bold" href="about.html">About Us</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div class="md:col-span-3 flex flex-col gap-3">
+          <span class="text-xs font-bold text-on-surface uppercase tracking-wider">Direct Contact</span>
+          <div class="flex flex-col gap-2 text-sm">
+            <a class="inline-flex items-center gap-1.5 text-emerald-700 font-semibold hover:underline" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+              <span class="material-symbols-outlined text-base text-emerald-600">chat</span>
+              <span>WhatsApp: +91 95884 79306</span>
+            </a>
+            <a class="inline-flex items-center gap-1.5 text-pink-600 font-semibold hover:underline" href="https://www.instagram.com/digimarklyofficial/" target="_blank">
+              <span class="material-symbols-outlined text-base text-pink-600">photo_camera</span>
+              <span>Instagram @digimarklyofficial</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant border-t border-surface-container">
+        <p>© 2026 DigiMarkly. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a class="hover:text-primary transition-colors" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">WhatsApp Direct</a>
+          <span>•</span>
+          <a class="hover:text-primary transition-colors" href="https://www.instagram.com/digimarklyofficial/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Widget -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <a class="group flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+      <span class="material-symbols-outlined text-white text-xl">chat</span>
+      <span class="text-sm font-bold pr-1">Chat on WhatsApp</span>
+    </a>
+  </div>
+
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>

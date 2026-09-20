@@ -25,6 +25,13 @@ Official responsive website for **DigiMarkly**, a creative digital growth partne
   - 🏡 Real Estate & Property Portals (Interactive Listings, Lead Capture)
   - 💼 Corporate & Business Suites (Client Onboarding, Consultation Booking)
   - 🛍️ Modern E-Commerce Stores (Lightning Checkout, Product Catalogs)
+- 📄 **Full Multi-Page Architecture**:
+  - 🏠 **Home (`index.html`)**: Complete agency landing page, interactive hero, value proposition, service overview, concept showcase, and FAQ.
+  - 🛠️ **Services (`services.html`)**: Deep dive into Custom Web Development, Meta Ads Management, and Local Google SEO.
+  - 🎨 **Our Work (`our-work.html`)**: Interactive demo concept builds with category filters (Restaurants, Salons, Real Estate, Corporate, E-Commerce).
+  - 👥 **About Us (`about.html`)**: The DigiMarkly story, core operating values, Pune studio location, and honest client philosophy.
+  - 💰 **Pricing (`pricing.html`)**: Transparent pricing tiers (Starter ₹7k, Growth ₹14.9k, Custom Retainers) and pricing FAQs.
+  - 📞 **Contact (`contact.html`)**: Direct WhatsApp, Instagram, phone connect, and interactive inquiry form.
 - 💬 **Seamless WhatsApp Lead Generation**: Standardized one-tap pre-filled WhatsApp direct inquiries across all services and package options.
 - 🎯 **Transparent Pricing & Scope**: Clear tiers for Startups, Growing Brands, and Full-Scale Retainers.
 - ⚡ **Performance & UX**: Ultra-fast loading, fluid animations, dark modern palette, and 100% mobile-responsive layout.

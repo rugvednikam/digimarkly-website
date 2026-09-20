@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Services | DigiMarkly - Web Development, Meta Ads & Local SEO</title>
+  <meta name="description" content="Explore DigiMarkly's core services: Custom Web Development for restaurants, salons, real estate, and businesses, Meta Ads management, and Local SEO solutions.">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#f9f9ff",
+            "surface-bright": "#f9f9ff",
+            "surface-container": "#e9edff",
+            "surface-container-low": "#f1f3ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e1e8fd",
+            "surface-container-highest": "#dce2f7",
+            "on-surface": "#141b2b",
+            "on-surface-variant": "#444654",
+            "primary": "#002d9b",
+            "primary-container": "#1a44c2",
+            "primary-fixed": "#dde1ff",
+            "primary-fixed-dim": "#b7c4ff",
+            "on-primary": "#ffffff",
+            "secondary": "#855300",
+            "secondary-container": "#fea619",
+            "secondary-fixed": "#ffddb8",
+            "on-secondary-fixed": "#2a1700",
+            "outline": "#747685",
+            "outline-variant": "#c4c5d6"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "sans-serif"],
+            "body": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body text-body text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm">
+        <a class="flex items-center gap-space-sm group" href="index.html">
+          <div class="relative flex items-center justify-center">
+            <img alt="DigiMarkly Agency" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container/20 group-hover:ring-primary-container transition-all" src="https://lh3.googleusercontent.com/aida/AEtjO1VgcJPJgxc0G3s3EXTmimor0GwqWcjg-Fy_WEHFGjtAl0wVtwYVQVFrc_Ar0JxSAc-InR1tmfAtJIleSKjxbA_oNVKw50mEtpRSd4S_a5zExnqqqLUmEGpUPr3HRBYBQPmwSfL6eKQ1k85KnhC1kfvPJQ6Qo37bdWpcdF78ciI6lLHZiIxBq40ikF_ipyHVaP7bvsb3_VQub0lxd-jDpbD-RnACEucvpyfyOnGXZAOo1-egfXRKQteBSGyGATrUw6dqjiy2qBfwFQ">
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-secondary-container rounded-full border-2 border-surface-container-lowest"></span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold text-primary tracking-tight">DigiMarkly</span>
+            <span class="text-xs text-on-surface-variant -mt-1 hidden sm:inline font-medium">Growth Studio</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+        <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+        <a aria-current="page" class="relative py-2 text-primary font-bold after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:scale-x-100" href="services.html">Services</a>
+        <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="our-work.html">Our Work</a>
+        <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
+        <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+        <a class="py-2 text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-[0_4px_20px_-2px_rgba(16,185,129,0.25)] hover:shadow-[0_12px_32px_-4px_rgba(16,185,129,0.35)] hover:-translate-y-0.5 transition-all" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+          <span class="material-symbols-outlined text-lg">chat</span>
+          <span>WhatsApp Us</span>
+        </a>
+        <a class="hidden sm:inline-flex items-center p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/digimarklyofficial/" target="_blank" title="Instagram @digimarklyofficial">
+          <span class="material-symbols-outlined text-xl text-pink-600">photo_camera</span>
+        </a>
+        <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden p-2 text-on-surface-variant hover:text-primary rounded-lg hover:bg-surface-container transition-colors" type="button">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-surface-container-lowest border-t border-surface-container px-6 py-4 flex-col gap-3">
+      <a class="py-2 text-on-surface-variant font-medium" href="index.html">Home</a>
+      <a class="py-2 text-primary font-bold" href="services.html">Services</a>
+      <a class="py-2 text-on-surface-variant font-medium" href="our-work.html">Our Work</a>
+      <a class="py-2 text-on-surface-variant font-medium" href="about.html">About Us</a>
+      <a class="py-2 text-on-surface-variant font-medium" href="pricing.html">Pricing</a>
+      <a class="py-2 text-on-surface-variant font-medium" href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-24 min-h-screen">
+    <!-- PAGE HERO -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-surface-container-low to-surface border-b border-surface-container/60">
+      <div class="max-w-7xl mx-auto px-gutter text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed text-primary font-semibold text-xs mb-4 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-primary"></span>
+          Tailored Growth Solutions
+        </div>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-on-surface tracking-tight max-w-4xl mx-auto leading-tight">
+          Everything Your Business Needs to Grow Online. <span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">Nothing It Doesn't.</span>
+        </h1>
+        <p class="text-base md:text-lg text-on-surface-variant max-w-2xl mx-auto mt-4 leading-relaxed">
+          From fast, mobile-friendly websites to high-converting Meta Ads and Google search visibility — built with honest communication and zero hidden charges.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+          <a class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:-translate-y-0.5 transition-all text-sm" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+            <span class="material-symbols-outlined text-lg">chat</span>
+            <span>Discuss on WhatsApp</span>
+          </a>
+          <a class="inline-flex items-center gap-2 bg-surface-container hover:bg-surface-container-high text-primary font-semibold px-6 py-3 rounded-xl transition-all text-sm" href="pricing.html">
+            <span class="material-symbols-outlined text-lg">payments</span>
+            <span>View Pricing & Plans</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 1: WEB DEVELOPMENT -->
+    <section class="py-20 bg-surface" id="web-development">
+      <div class="max-w-7xl mx-auto px-gutter">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 flex flex-col gap-6">
+            <div class="inline-flex items-center gap-2 text-secondary font-bold text-xs uppercase tracking-wider">
+              <span class="material-symbols-outlined text-base">laptop_mac</span>
+              Service 01
+            </div>
+            <h2 class="text-2xl md:text-4xl font-extrabold text-on-surface tracking-tight">
+              High-Converting Custom Websites Built For Real Results
+            </h2>
+            <p class="text-base text-on-surface-variant leading-relaxed">
+              Your website is often the first impression customers have of your business. We build sleek, lightweight, mobile-first websites designed specifically to turn curious visitors into paying clients.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="p-3.5 rounded-xl bg-surface-container-low border border-surface-container">
+                <span class="material-symbols-outlined text-emerald-600 text-xl mb-1">restaurant</span>
+                <p class="font-bold text-sm text-on-surface">Restaurants & Cafés</p>
+                <p class="text-xs text-on-surface-variant mt-0.5">Interactive menus, table booking & direct WhatsApp orders.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-surface-container-low border border-surface-container">
+                <span class="material-symbols-outlined text-pink-600 text-xl mb-1">spa</span>
+                <p class="font-bold text-sm text-on-surface">Salons & Parlours</p>
+                <p class="text-xs text-on-surface-variant mt-0.5">Rate lists, bridal makeover packages & appointment forms.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-surface-container-low border border-surface-container">
+                <span class="material-symbols-outlined text-primary text-xl mb-1">apartment</span>
+                <p class="font-bold text-sm text-on-surface">Real Estate & Living</p>
+                <p class="text-xs text-on-surface-variant mt-0.5">Project highlights, floor plans & high-intent lead capture.</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-surface-container-low border border-surface-container">
+                <span class="material-symbols-outlined text-amber-600 text-xl mb-1">shopping_bag</span>
+                <p class="font-bold text-sm text-on-surface">E-Commerce Stores</p>
+                <p class="text-xs text-on-surface-variant mt-0.5">Catalogs, product filters & fast WhatsApp checkout.</p>
+              </div>
+            </div>
+
+            <div class="pt-4 flex items-center gap-4">
+              <a class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-xl text-xs transition-all shadow-sm" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+                <span class="material-symbols-outlined text-sm">chat</span>
+                <span>Get Website Starting ₹7,000</span>
+              </a>
+              <a class="text-primary font-bold text-xs hover:underline flex items-center gap-1" href="our-work.html">
+                <span>View Demo Builds</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="rounded-3xl overflow-hidden shadow-xl border border-surface-container bg-surface-container-lowest p-3">
+              <img alt="The Lantern Cafe & Salon Website Mockup" class="w-full h-80 sm:h-96 object-cover rounded-2xl" src="lantern-cafe-preview.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 2: META & INSTAGRAM ADS -->
+    <section class="py-20 bg-surface-container-low" id="meta-ads">
+      <div class="max-w-7xl mx-auto px-gutter">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 order-2 lg:order-1">
+            <div class="rounded-3xl bg-surface-container-lowest p-6 sm:p-8 shadow-xl border border-surface-container">
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">DM</div>
+                  <div>
+                    <h4 class="font-bold text-sm text-on-surface">Meta & Instagram Ad Engine</h4>
+                    <p class="text-xs text-on-surface-variant">Targeted local customer generation</p>
+                  </div>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-bold">Active Engine</span>
+              </div>
+
+              <div class="space-y-4">
+                <div class="p-4 rounded-xl bg-surface-container-low">
+                  <div class="flex items-center justify-between text-xs font-bold text-on-surface mb-1">
+                    <span>Hyper-Local Geographic Targeting</span>
+                    <span class="text-primary">Pune & Surrounding Areas</span>
+                  </div>
+                  <p class="text-xs text-on-surface-variant">We target potential buyers within a 3–15 km radius of your shop or service area.</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-surface-container-low">
+                  <div class="flex items-center justify-between text-xs font-bold text-on-surface mb-1">
+                    <span>Direct-to-WhatsApp Funnels</span>
+                    <span class="text-emerald-700">1-Tap Conversation</span>
+                  </div>
+                  <p class="text-xs text-on-surface-variant">Skip complex forms. Customers tap your ad and open a chat directly with you.</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-surface-container-low">
+                  <div class="flex items-center justify-between text-xs font-bold text-on-surface mb-1">
+                    <span>Custom Creatives & Copywriting</span>
+                    <span class="text-secondary">High Attention</span>
+                  </div>
+                  <p class="text-xs text-on-surface-variant">Catchy visuals and relatable human text tailored for local consumers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 order-1 lg:order-2 flex flex-col gap-6">
+            <div class="inline-flex items-center gap-2 text-pink-600 font-bold text-xs uppercase tracking-wider">
+              <span class="material-symbols-outlined text-base">campaign</span>
+              Service 02
+            </div>
+            <h2 class="text-2xl md:text-4xl font-extrabold text-on-surface tracking-tight">
+              Targeted Meta & Instagram Ads That Bring Direct Inquiries
+            </h2>
+            <p class="text-base text-on-surface-variant leading-relaxed">
+              Stop boosting random posts. We engineer structured ad campaigns focused on generating real, high-intent messages directly to your WhatsApp inbox.
+            </p>
+
+            <ul class="space-y-2.5 text-sm text-on-surface font-medium">
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-emerald-600 text-lg">check_circle</span>
+                <span>Hyper-local audience targeting (age, interests, specific localities)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-emerald-600 text-lg">check_circle</span>
+                <span>Complete creative design (banners, reels script, ad copy)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-emerald-600 text-lg">check_circle</span>
+                <span>A/B creative testing to find lowest cost per customer</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-emerald-600 text-lg">check_circle</span>
+                <span>Clear weekly performance reports with zero agency fluff</span>
+              </li>
+            </ul>
+
+            <div class="pt-2">
+              <a class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-xl text-xs transition-all shadow-sm" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+                <span class="material-symbols-outlined text-sm">chat</span>
+                <span>Inquire About Ads Management</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 3: LOCAL SEO & GOOGLE SEARCH -->
+    <section class="py-20 bg-surface" id="seo">
+      <div class="max-w-7xl mx-auto px-gutter">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 flex flex-col gap-6">
+            <div class="inline-flex items-center gap-2 text-emerald-700 font-bold text-xs uppercase tracking-wider">
+              <span class="material-symbols-outlined text-base">travel_explore</span>
+              Service 03
+            </div>
+            <h2 class="text-2xl md:text-4xl font-extrabold text-on-surface tracking-tight">
+              Local SEO & Google Business Profile Optimization
+            </h2>
+            <p class="text-base text-on-surface-variant leading-relaxed">
+              When someone in your area searches for your service on Google or Maps, does your business show up at the top? We optimize your digital presence so nearby customers find and choose you.
+            </p>
+
+            <div class="space-y-3">
+              <div class="p-4 rounded-xl bg-surface-container-low border border-surface-container">
+                <h4 class="font-bold text-sm text-on-surface">Google Business Profile Tuning</h4>
+                <p class="text-xs text-on-surface-variant mt-1">Proper categories, high-resolution photos, accurate hours, and structured review generation systems.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-surface-container-low border border-surface-container">
+                <h4 class="font-bold text-sm text-on-surface">Local Keyword Strategy</h4>
+                <p class="text-xs text-on-surface-variant mt-1">Ranking for high-intent search terms like "best salon near me" or "authentic restaurant in Pune".</p>
+              </div>
+              <div class="p-4 rounded-xl bg-surface-container-low border border-surface-container">
+                <h4 class="font-bold text-sm text-on-surface">On-Page Technical Foundations</h4>
+                <p class="text-xs text-on-surface-variant mt-1">Lightning-fast page speed, mobile optimization, semantic markup, and localized meta tags.</p>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-xl text-xs transition-all shadow-sm" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+                <span class="material-symbols-outlined text-sm">chat</span>
+                <span>Get a Free Google Audit</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="rounded-3xl bg-surface-container-lowest p-6 sm:p-8 shadow-xl border border-surface-container">
+              <div class="flex items-center justify-between pb-4 border-b border-surface-container">
+                <span class="font-bold text-sm text-on-surface">Google Search Simulation</span>
+                <span class="text-xs text-emerald-700 font-semibold flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Verified Listing
+                </span>
+              </div>
+              <div class="mt-4 p-4 rounded-2xl bg-surface-container-low">
+                <div class="flex items-center gap-2 text-xs text-on-surface-variant mb-1 font-mono">
+                  <span>https://yourbusiness.com</span>
+                  <span>› pune</span>
+                </div>
+                <h3 class="text-primary font-bold text-base hover:underline cursor-pointer">Your Business Name - #1 Rated Local Service</h3>
+                <p class="text-xs text-on-surface-variant mt-1">Discover top-rated services in Pune. Visit our store or book directly on WhatsApp. 5.0 ⭐⭐⭐⭐⭐ (100+ Reviews).</p>
+                <div class="mt-3 flex items-center gap-2">
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-xs font-semibold text-on-surface border border-surface-container">Directions</span>
+                  <span class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-xs font-semibold text-on-surface border border-surface-container">Call Now</span>
+                  <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-semibold border border-emerald-200">WhatsApp Chat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA BANNER -->
+    <section class="py-16 bg-gradient-to-r from-primary-container to-primary text-white">
+      <div class="max-w-5xl mx-auto px-gutter text-center flex flex-col items-center gap-6">
+        <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">
+          Not Sure Which Solution Fits Your Business Best?
+        </h2>
+        <p class="text-sm md:text-base text-primary-fixed leading-relaxed max-w-2xl">
+          Send us a message on WhatsApp. Tell us about your business goals, and we'll recommend a simple, transparent plan with zero sales pressure.
+        </p>
+        <a class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-sm" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+          <span class="material-symbols-outlined text-xl">chat</span>
+          <span>Start WhatsApp Conversation</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low border-t border-surface-container">
+    <div class="max-w-7xl mx-auto px-gutter pt-12 pb-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-5 flex flex-col gap-3">
+          <div class="flex items-center gap-3">
+            <img alt="DigiMarkly Logo" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida/AEtjO1VgcJPJgxc0G3s3EXTmimor0GwqWcjg-Fy_WEHFGjtAl0wVtwYVQVFrc_Ar0JxSAc-InR1tmfAtJIleSKjxbA_oNVKw50mEtpRSd4S_a5zExnqqqLUmEGpUPr3HRBYBQPmwSfL6eKQ1k85KnhC1kfvPJQ6Qo37bdWpcdF78ciI6lLHZiIxBq40ikF_ipyHVaP7bvsb3_VQub0lxd-jDpbD-RnACEucvpyfyOnGXZAOo1-egfXRKQteBSGyGATrUw6dqjiy2qBfwFQ">
+            <span class="text-xl font-bold text-primary">DigiMarkly</span>
+          </div>
+          <p class="text-sm text-on-surface-variant max-w-md">
+            A digital agency helping local businesses, restaurants, salons, and shops build a strong online presence with clarity and honest guidance.
+          </p>
+          <p class="text-xs text-on-surface-variant flex items-center gap-1">
+            <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+            Based in Pune, India • Serving Pan-India
+          </p>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-3">
+          <span class="text-xs font-bold text-on-surface uppercase tracking-wider">Quick Navigation</span>
+          <nav class="flex flex-col gap-2 text-sm">
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+            <a class="text-primary font-bold" href="services.html">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="our-work.html">Our Work</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div class="md:col-span-3 flex flex-col gap-3">
+          <span class="text-xs font-bold text-on-surface uppercase tracking-wider">Direct Channels</span>
+          <div class="flex flex-col gap-2 text-sm">
+            <a class="inline-flex items-center gap-1.5 text-emerald-700 font-semibold hover:underline" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+              <span class="material-symbols-outlined text-base text-emerald-600">chat</span>
+              <span>WhatsApp: +91 95884 79306</span>
+            </a>
+            <a class="inline-flex items-center gap-1.5 text-pink-600 font-semibold hover:underline" href="https://www.instagram.com/digimarklyofficial/" target="_blank">
+              <span class="material-symbols-outlined text-base text-pink-600">photo_camera</span>
+              <span>Instagram @digimarklyofficial</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant border-t border-surface-container">
+        <p>© 2026 DigiMarkly. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a class="hover:text-primary transition-colors" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">WhatsApp Direct</a>
+          <span>•</span>
+          <a class="hover:text-primary transition-colors" href="https://www.instagram.com/digimarklyofficial/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Chat Widget -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <a class="group flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-[0_12px_32px_-4px_rgba(16,185,129,0.4)] hover:shadow-[0_16px_40px_-4px_rgba(16,185,129,0.5)] hover:-translate-y-1 transition-all" href="https://wa.me/919588479306?text=Hi%20digimarkly%20I%20am%20interested%20in%20your%20services%20would%20like%20to%20discuss%20it" target="_blank">
+      <span class="flex h-3 w-3 relative">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+      </span>
+      <span class="material-symbols-outlined text-white text-xl">chat</span>
+      <span class="text-sm font-bold pr-1">Chat on WhatsApp</span>
+    </a>
+  </div>
+
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
